@@ -1,0 +1,26 @@
+import org.openhab.core.library.types.*
+import org.openhab.core.persistence.*
+import org.openhab.model.script.actions.*
+import org.openhab.library.tel.types.CallType
+
+rule StartUp
+when System started
+then 
+	sendCommand(DeviceOwner, "David")
+end
+
+rule OwnersDeviceOnNetwork
+when 
+	Item NetworkHealth_OwnersDevice received update ON
+then
+	sendCommand(HueLights, ON)
+end
+
+
+rule OwnersDeviceOffNetwork
+when
+	Item NetworkHealth_OwnersDevice received update OFF
+then
+	sendCommand(HueLights, OFF)
+end
+	

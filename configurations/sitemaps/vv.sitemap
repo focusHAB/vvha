@@ -1,0 +1,23 @@
+sitemap vv label="Vollversammlung"
+{
+
+	
+	Frame label="Hue Lights" {
+		Switch item=Hue_OnOff label="Alle Lampen"
+		
+		Switch item=Hue_OnOff_1 
+		Switch item=Hue_OnOff_2 
+		//Switch item=Hue_OnOff_3 
+		
+		Colorpicker item=Hue_Color_1 icon="slider"
+		Colorpicker item=Hue_Color_2 icon="slider"
+		Slider item=Hue_Dimmer_Brightness_1 label="Dimm Brightness Hue 1"
+		Slider item=Hue_Dimmer_ColTemp_1 label="Dimm Col Temp Hue 1"
+//		Selection item=Lamp_Scene label="Szenen Auswahl" mappings=[0=off, 1=AXA, 2=Television]
+	}
+	
+		Frame label="Network Health" {
+		Switch item=NetworkHealth_OwnersDevice label="Owners Devices is on Network"
+	}
+
+}
